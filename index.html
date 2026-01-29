@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Ngong Training Center - 2026 Intake">
+  <meta property="og:description"
+    content="Professional Computer Packages, Coding, and Engineering courses in Ngong Town. Apply now!">
+  <meta property="og:image" content="poster.png">
+  <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
+  <title>Ngong Training Center - Official Prospectus 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* --- Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Futura', 'Trebuchet MS', 'Jost', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #003366;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d4ff;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      background: linear-gradient(rgba(0, 32, 64, 0.85), rgba(0, 32, 64, 0.85)),
+        url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1470') center/cover no-repeat;
+      padding: 160px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      text-transform: none;
+      letter-spacing: 1px;
+    }
+
+    .typing-text {
+      color: #00d4ff;
+      font-weight: bold;
+      border-right: 3px solid #00d4ff;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      min-width: 300px;
+      text-align: left;
+      animation: typing 4s steps(30, end) infinite, blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+
+      0%,
+      10% {
+        width: 0;
+      }
+
+      45%,
+      55% {
+        width: 100%;
+      }
+
+      90%,
+      100% {
+        width: 0;
+      }
+    }
+
+    @keyframes blink-caret {
+
+      from,
+      to {
+        border-color: transparent
+      }
+
+      50% {
+        border-color: #00d4ff;
+      }
+    }
+
+    /* --- Courses Section --- */
+    .courses {
+      background: #f7f7f7;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .course-card {
+      background: white;
+      padding: 30px;
+      border-radius: 0px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-left: 8px solid #004080;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card h3 {
+      color: #004080;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .course-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      font-weight: 300;
+    }
+
+    .course-card ul li::before {
+      content: "• ";
+      color: #00d4ff;
+    }
+
+    .course-card .price-tag {
+      font-weight: 700;
+      color: #004080;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    /* --- Contact Form --- */
+    .contact {
+      background: #004080;
+      color: white;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 550px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #333;
+      text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      padding: 15px;
+      border: 1px solid #ddd;
+      font-family: 'Jost', sans-serif;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .btn-submit {
+      background: #004080;
+      color: white;
+      padding: 18px;
+      border: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #00d4ff;
+      color: #003366;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      background: #001a33;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      font-size: 0.8rem;
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .typing-text {
+        min-width: 200px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#about">The Center</a>
+    <a href="#courses">Programs</a>
+    <a href="#contact">Enroll Now</a>
+  </nav>
+
+  <section class="hero">
+    <h1>NGONG TRAINING CENTER</h1>
+    <h2>Master <span class="typing-text" id="dynamic-text">Computer Packages</span></h2>
+    <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 3px; margin-top: 20px;">
+      Orok Plaza, Ngong Town • Kenya
+    </p>
+    <button class="btn-submit" onclick="document.getElementById('contact').scrollIntoView()"
+      style="width: auto; padding: 15px 50px; margin-top: 30px;">Apply for 2026 Intake</button>
+  </section>
+
+  <section id="about"
+    style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
+    <div style="flex: 1; min-width: 300px;">
+      <h2>Bridging the Gap</h2>
+      <p>At Ngong Training Center, we believe technical skills are the gateway to the modern economy. We provide
+        high-impact, practical training designed to turn beginners into professionals.</p>
+      <div style="margin-top: 20px; border-left: 4px solid #00d4ff; padding-left: 20px;">
+        <p><strong>01.</strong> Practical-First Approach</p>
+        <p><strong>02.</strong> Industry-Veteran Instructors</p>
+        <p><strong>03.</strong> Flexible Morning & Evening Classes</p>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="./images/ntcpic.jpeg"
+        alt="Computer Lab" style="width: 100%; filter: grayscale(20%);">
+    </div>
+  </section>
+
+  <section id="courses" class="courses">
+    <h2 style="text-align:center; margin-bottom:50px;">Our 2026 Programs</h2>
+    <div class="course-grid">
+
+      <div class="course-card">
+        <h3>Secretarial Level 1</h3>
+        <ul>
+          <li>MS Word, Excel, Access</li>
+          <li>Windows, Typing Speed</li>
+          <li>Internet & Email</li>
+        </ul>
+        <p class="price-tag">Fee: KES 4,500 (5 Weeks)</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Computer Engineering</h3>
+        <ul>
+          <li>Hardware Repair</li>
+          <li>System Maintenance</li>
+          <li>Troubleshooting</li>
+        </ul>
+        <p class="price-tag">Fee: KES 15,000 (2 Months)</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Graphics & Design</h3>
+        <ul>
+          <li>Adobe Photoshop & Illustrator</li>
+          <li>AutoCAD & ArchiCAD</li>
+          <li>Adobe Premiere Pro</li>
+        </ul>
+        <p class="price-tag">From: KES 7,000</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Web Development</h3>
+        <ul>
+          <li>HTML5, CSS3, JavaScript</li>
+          <li>Front-end & Back-end</li>
+          <li>Python Programming</li>
+        </ul>
+        <p class="price-tag">Fee: KES 18,000 (1 Month)</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Data Science & Stats</h3>
+        <ul>
+          <li>Big Data / Hadoop</li>
+          <li>SPSS, STATA</li>
+          <li>R-Programming</li>
+        </ul>
+        <p class="price-tag">From: KES 8,000</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Business & Management</h3>
+        <ul>
+          <li>Project Management & M&E</li>
+          <li>Digital Marketing</li>
+          <li>QuickBooks & Sage</li>
+        </ul>
+        <p class="price-tag">From: KES 5,500</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div id="form-container">
+      <h2>Admissions 2026</h2>
+      <p>Orok Plaza, 1st floor Ngong opposite Coop bank</p>
+
+      <form id="ntc-form" action="https://formspree.io/f/your-id-here" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="FULL NAME" required>
+        <input type="tel" name="phone" placeholder="PHONE NUMBER" required>
+        <select name="course" required>
+          <option value="" disabled selected>SELECT A PROGRAM</option>
+          <option value="Computer Packages">Computer Packages</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Graphic Design">Graphic Design / AutoCAD</option>
+          <option value="Web Development">Web Development / Python</option>
+          <option value="Management">Project Management / M&E</option>
+          <option value="Accounting">Accounting Packages</option>
+        </select>
+        <textarea name="message" placeholder="ANY QUESTIONS?" rows="3"></textarea>
+        <button type="submit" class="btn-submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+  <!-- <div style="width: 100%; margin-top: 30px; border: 5px solid #f7f7f7;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3988.711849033379!2d36.6533418!3d-1.3614204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f031f0a4fd377%3A0x658e96ccb43e6351!2sOrok%20Plaza!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div> -->
+
+  <a href="https://wa.me/254784485009" class="whatsapp-btn" target="_blank">
+    WhatsApp Inquiry
+  </a>
+
+  <footer>
+    <p>Orok Plaza, 1st Floor, Ngong (Opposite Co-op Bank)</p>
+    <p>&copy; 2026 Ngong Training Center. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const textElement = document.getElementById('dynamic-text');
+    const phrases = ["Computer Packages", "Graphic Design", "Web Development", "Data Science", "Engineering"];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % phrases.length;
+      textElement.textContent = phrases[i];
+    }, 4000);
+
+    const form = document.getElementById('ntc-form');
+    form.addEventListener("submit", function () {
+      // Form handling logic here
+    });
+  </script>
+
+</body>
+
+</html>
