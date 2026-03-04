@@ -1,436 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Ngong Training Center - 2026 Intake">
-  <meta property="og:description"
-    content="Professional Computer Packages, Coding, and Engineering courses in Ngong Town. Apply now!">
-  <meta property="og:image" content="poster.png">
-  <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
-  <title>Ngong Training Center - Official Prospectus 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* --- Global Styles --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Futura', 'Trebuchet MS', 'Jost', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      scroll-behavior: smooth;
-      background: #fff;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    section {
-      padding: 80px 20px;
-    }
-
-    /* --- Navigation --- */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background: #003366;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav a {
-      color: white;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #00d4ff;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      background: linear-gradient(rgba(0, 32, 64, 0.85), rgba(0, 32, 64, 0.85)),
-        url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1470') center/cover no-repeat;
-      padding: 160px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-bottom: 30px;
-      text-transform: none;
-      letter-spacing: 1px;
-    }
-
-    .typing-text {
-      color: #00d4ff;
-      font-weight: bold;
-      border-right: 3px solid #00d4ff;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-      vertical-align: bottom;
-      min-width: 300px;
-      text-align: left;
-      animation: typing 4s steps(30, end) infinite, blink-caret .75s step-end infinite;
-    }
-
-    @keyframes typing {
-
-      0%,
-      10% {
-        width: 0;
-      }
-
-      45%,
-      55% {
-        width: 100%;
-      }
-
-      90%,
-      100% {
-        width: 0;
-      }
-    }
-
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent
-      }
-
-      50% {
-        border-color: #00d4ff;
-      }
-    }
-
-    /* --- Courses Section --- */
-    .courses {
-      background: #f7f7f7;
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .course-card {
-      background: white;
-      padding: 30px;
-      border-radius: 0px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      border-left: 8px solid #004080;
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .course-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .course-card h3 {
-      color: #004080;
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-    }
-
-    .course-card ul {
-      list-style: none;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      font-weight: 300;
-    }
-
-    .course-card ul li::before {
-      content: "• ";
-      color: #00d4ff;
-    }
-
-    .course-card .price-tag {
-      font-weight: 700;
-      color: #004080;
-      border-top: 1px solid #eee;
-      padding-top: 10px;
-    }
-
-    /* --- Contact Form --- */
-    .contact {
-      background: #004080;
-      color: white;
-      text-align: center;
-    }
-
-    .contact-form {
-      max-width: 550px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 0px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      color: #333;
-      text-align: left;
-    }
-
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      padding: 15px;
-      border: 1px solid #ddd;
-      font-family: 'Jost', sans-serif;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    .btn-submit {
-      background: #004080;
-      color: white;
-      padding: 18px;
-      border: none;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn-submit:hover {
-      background: #00d4ff;
-      color: #003366;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 5px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
-
-    footer {
-      background: #001a33;
-      color: white;
-      text-align: center;
-      padding: 40px;
-      font-size: 0.8rem;
-    }
-
-    @media(max-width:768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .typing-text {
-        min-width: 200px;
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngong Training Center | Official 2026 Prospectus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandViolet: '#8B5CF6', 
+                        deepViolet: '#6D28D9',
+                        softViolet: '#DDD6FE',
+                        smokeWhite: '#F5F5F5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Jost', sans-serif; }
+        .typing-cursor::after {
+            content: ""; display: inline-block; width: 3px; height: 1.2em;
+            background-color: white; margin-left: 4px; vertical-align: middle;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        
+        /* Floating Animation for the abstract hero elements */
+        .float-slow { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
+<body class="bg-smokeWhite text-slate-900">
 
-<body>
+    <nav class="fixed w-full z-50 bg-brandViolet/90 backdrop-blur-md border-b border-white/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-white font-bold text-xl tracking-tighter uppercase">
+                Ngong <span class="text-softViolet">Training Center</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-white/80 hover:text-white transition text-sm font-semibold uppercase tracking-wider">About</a>
+                <a href="#courses" class="text-white/80 hover:text-white transition text-sm font-semibold uppercase tracking-wider">Programs</a>
+                <a href="#contact" class="bg-white text-brandViolet px-6 py-2 rounded-full font-bold hover:bg-smokeWhite transition text-sm">ENROLL NOW</a>
+            </div>
+        </div>
+    </nav>
 
-  <nav>
-    <a href="#about">The Center</a>
-    <a href="#courses">Programs</a>
-    <a href="#contact">Enroll Now</a>
-  </nav>
+    <section class="relative bg-brandViolet pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden text-white">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-deepViolet rounded-full blur-[120px] opacity-60"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-softViolet rounded-full blur-[100px] opacity-30"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="inline-flex items-center space-x-2 py-1 px-4 rounded-full bg-white/10 border border-white/20 text-xs font-bold mb-6 uppercase tracking-widest">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                        </span>
+                        <span>Admission Open: March 2026</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+                        The Future <br> is <span class="text-softViolet">Violet.</span>
+                    </h1>
+                    <p class="text-white/90 text-xl mb-12 max-w-lg leading-relaxed font-light">
+                        Level up your skills at <span class="font-medium">Orok Plaza, Ngong.</span> We specialize in 
+                        <span id="typing-text" class="font-bold typing-cursor"></span>
+                    </p>
+                    <div class="flex flex-wrap gap-5">
+                        <a href="#contact" class="px-10 py-5 bg-white text-brandViolet font-bold rounded-2xl text-center shadow-xl hover:scale-105 transition-all">Enroll Today</a>
+                        <a href="#courses" class="px-10 py-5 border border-white/40 font-semibold rounded-2xl text-center hover:bg-white/10 transition">Browse Prospectus</a>
+                    </div>
+                </div>
 
-  <section class="hero">
-    <h1>NGONG TRAINING CENTER</h1>
-    <h2>Master <span class="typing-text" id="dynamic-text">Computer Packages</span></h2>
-    <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 3px; margin-top: 20px;">
-      Orok Plaza, Ngong Town • Kenya
-    </p>
-    <button class="btn-submit" onclick="document.getElementById('contact').scrollIntoView()"
-      style="width: auto; padding: 15px 50px; margin-top: 30px;">Apply for 2026 Intake</button>
-  </section>
+                <div class="w-full lg:w-1/2 relative h-[400px] flex items-center justify-center">
+                    <div class="relative w-full max-w-md float-slow">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[3rem] rotate-12 z-0"></div>
+                        <div class="absolute top-10 left-10 w-64 h-64 bg-softViolet/20 backdrop-blur-xl border border-white/30 rounded-[3rem] -rotate-12 z-10"></div>
+                        <div class="relative bg-white text-brandViolet p-8 rounded-[2.5rem] shadow-2xl z-20 border-t border-white/50">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="p-3 bg-softViolet rounded-xl">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase font-bold text-slate-400">Expertise</p>
+                                        <p class="text-xl font-bold">Practical Learning</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="p-3 bg-softViolet rounded-xl">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs uppercase font-bold text-slate-400">Focus</p>
+                                        <p class="text-xl font-bold">2026 Tech Ready</p>
+                                    </div>
+                                </div>
+                                <div class="pt-4 border-t border-slate-100 flex justify-around text-center">
+                                    <div>
+                                        <p class="text-2xl font-bold">1:1</p>
+                                        <p class="text-[10px] uppercase font-bold opacity-60">PC Ratio</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-2xl font-bold">100%</p>
+                                        <p class="text-[10px] uppercase font-bold opacity-60">Hands-on</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="about"
-    style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 60px; align-items: center;">
-    <div style="flex: 1; min-width: 300px;">
-      <h2>Bridging the Gap</h2>
-      <p>At Ngong Training Center, we believe technical skills are the gateway to the modern economy. We provide
-        high-impact, practical training designed to turn beginners into professionals.</p>
-      <div style="margin-top: 20px; border-left: 4px solid #00d4ff; padding-left: 20px;">
-        <p><strong>01.</strong> Practical-First Approach</p>
-        <p><strong>02.</strong> Industry-Veteran Instructors</p>
-        <p><strong>03.</strong> Flexible Morning & Evening Classes</p>
-      </div>
-    </div>
-    <div style="flex: 1; min-width: 300px;">
-      <img src="./images/ntcpic.jpeg"
-        alt="Computer Lab" style="width: 100%; filter: grayscale(20%);">
-    </div>
-  </section>
+    <section id="about" class="py-24 bg-white border-b border-softViolet">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="group">
+                    <div class="w-14 h-14 bg-softViolet rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brandViolet group-hover:text-white transition-all text-brandViolet">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">1:1 Student Ratio</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Dedicated modern workstation for every student. No sharing.</p>
+                </div>
+                <div class="group">
+                    <div class="w-14 h-14 bg-softViolet rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brandViolet group-hover:text-white transition-all text-brandViolet">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Flexible Shifts</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Choose between Morning, Afternoon, or Evening sessions.</p>
+                </div>
+                <div class="group">
+                    <div class="w-14 h-14 bg-softViolet rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brandViolet group-hover:text-white transition-all text-brandViolet">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Accredited Certs</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Get recognized certification to launch your career.</p>
+                </div>
+                <div class="group">
+                    <div class="w-14 h-14 bg-softViolet rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brandViolet group-hover:text-white transition-all text-brandViolet">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Prime Location</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Located at Orok Plaza, right in the heart of Ngong Town.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="courses" class="courses">
-    <h2 style="text-align:center; margin-bottom:50px;">Our 2026 Programs</h2>
-    <div class="course-grid">
+    <section id="courses" class="py-24 bg-smokeWhite">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Current Programs</h2>
+                <div class="h-1.5 w-20 bg-brandViolet mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brandViolet transition-all">
+                    <h3 class="text-xl font-bold text-deepViolet mb-4">Web Development</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Full-stack training: HTML, CSS, JavaScript, React, and Python.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-100 font-bold">
+                        <span class="text-lg text-brandViolet">KES 18,000</span>
+                        <a href="#contact" class="text-brandViolet hover:underline italic">Apply →</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brandViolet transition-all">
+                    <h3 class="text-xl font-bold text-deepViolet mb-4">Computer Engineering</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Hardware repair, network setup, and troubleshooting.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-100 font-bold">
+                        <span class="text-lg text-brandViolet">KES 15,000</span>
+                        <a href="#contact" class="text-brandViolet hover:underline italic">Apply →</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-brandViolet transition-all">
+                    <h3 class="text-xl font-bold text-deepViolet mb-4">Computer Packages</h3>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">Master the full Microsoft Office suite and digital literacy.</p>
+                    <div class="flex justify-between items-center pt-6 border-t border-slate-100 font-bold">
+                        <span class="text-lg text-brandViolet">KES 4,500</span>
+                        <a href="#contact" class="text-brandViolet hover:underline italic">Apply →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="course-card">
-        <h3>Secretarial Level 1</h3>
-        <ul>
-          <li>MS Word, Excel, Access</li>
-          <li>Windows, Typing Speed</li>
-          <li>Internet & Email</li>
-        </ul>
-        <p class="price-tag">Fee: KES 4,500 (5 Weeks)</p>
-      </div>
+    <section id="contact" class="py-24 bg-brandViolet text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap -mx-4 items-center">
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                    <h2 class="text-5xl font-bold mb-8 uppercase tracking-tighter">Get Started</h2>
+                    <p class="text-softViolet text-lg mb-8 max-w-md">Join the 2026 cohort. Leave your details and we'll call you to finalize your admission.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/10 flex items-center justify-center rounded-xl font-bold">📍</div>
+                        <p class="font-medium">Orok Plaza, 1st Floor, Ngong Town</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <form class="bg-smokeWhite p-8 md:p-10 rounded-[2.5rem] shadow-2xl text-slate-900">
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-4 bg-white border border-softViolet rounded-xl outline-none focus:ring-2 focus:ring-brandViolet">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-4 bg-white border border-softViolet rounded-xl outline-none focus:ring-2 focus:ring-brandViolet">
+                            <select class="w-full p-4 bg-white border border-softViolet rounded-xl outline-none focus:ring-2 focus:ring-brandViolet">
+                                <option>Select a Program</option>
+                                <option>Web Development</option>
+                                <option>Computer Engineering</option>
+                                <option>Computer Packages</option>
+                            </select>
+                            <button class="w-full py-5 bg-brandViolet text-white font-bold rounded-xl hover:bg-deepViolet transition-all uppercase tracking-widest">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="course-card">
-        <h3>Computer Engineering</h3>
-        <ul>
-          <li>Hardware Repair</li>
-          <li>System Maintenance</li>
-          <li>Troubleshooting</li>
-        </ul>
-        <p class="price-tag">Fee: KES 15,000 (2 Months)</p>
-      </div>
+    <footer class="bg-slate-950 py-10 text-center text-slate-500">
+        <p class="text-softViolet font-bold tracking-[0.3em] uppercase mb-4">Ngong Training Center</p>
+        <p class="text-xs italic">"Skills for the future, excellence for today."</p>
+    </footer>
 
-      <div class="course-card">
-        <h3>Graphics & Design</h3>
-        <ul>
-          <li>Adobe Photoshop & Illustrator</li>
-          <li>AutoCAD & ArchiCAD</li>
-          <li>Adobe Premiere Pro</li>
-        </ul>
-        <p class="price-tag">From: KES 7,000</p>
-      </div>
+    <a href="https://wa.me/254784485009" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 flex items-center justify-center rounded-full shadow-2xl hover:scale-110 transition z-50">
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.27 9.27 0 01-4.487-1.164l-.325-.19-3.341.875.89-3.256-.208-.332A9.268 9.268 0 013.303 12c0-5.11 4.158-9.27 9.27-9.27 2.475 0 4.803.965 6.556 2.72s2.72 4.081 2.72 6.556c0 5.11-4.158 9.27-9.27 9.27m7.966-18.233A10.896 10.896 0 0012.002 2C6.008 2 1.148 6.858 1.148 12.854c0 1.914.487 3.784 1.412 5.465L1 23l4.771-1.252a10.859 10.859 0 005.23 1.34h.005c5.994 0 10.854-4.858 10.854-10.854 0-2.903-1.129-5.633-3.18-7.684z"/></svg>
+    </a>
 
-      <div class="course-card">
-        <h3>Web Development</h3>
-        <ul>
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>Front-end & Back-end</li>
-          <li>Python Programming</li>
-        </ul>
-        <p class="price-tag">Fee: KES 18,000 (1 Month)</p>
-      </div>
-
-      <div class="course-card">
-        <h3>Data Science & Stats</h3>
-        <ul>
-          <li>Big Data / Hadoop</li>
-          <li>SPSS, STATA</li>
-          <li>R-Programming</li>
-        </ul>
-        <p class="price-tag">From: KES 8,000</p>
-      </div>
-
-      <div class="course-card">
-        <h3>Business & Management</h3>
-        <ul>
-          <li>Project Management & M&E</li>
-          <li>Digital Marketing</li>
-          <li>QuickBooks & Sage</li>
-        </ul>
-        <p class="price-tag">From: KES 5,500</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div id="form-container">
-      <h2>Admissions 2026</h2>
-      <p>Orok Plaza, 1st floor Ngong opposite Coop bank</p>
-
-      <form id="ntc-form" action="https://formspree.io/f/your-id-here" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="FULL NAME" required>
-        <input type="tel" name="phone" placeholder="PHONE NUMBER" required>
-        <select name="course" required>
-          <option value="" disabled selected>SELECT A PROGRAM</option>
-          <option value="Computer Packages">Computer Packages</option>
-          <option value="Computer Engineering">Computer Engineering</option>
-          <option value="Graphic Design">Graphic Design / AutoCAD</option>
-          <option value="Web Development">Web Development / Python</option>
-          <option value="Management">Project Management / M&E</option>
-          <option value="Accounting">Accounting Packages</option>
-        </select>
-        <textarea name="message" placeholder="ANY QUESTIONS?" rows="3"></textarea>
-        <button type="submit" class="btn-submit">Submit Application</button>
-      </form>
-    </div>
-  </section>
-  <!-- <div style="width: 100%; margin-top: 30px; border: 5px solid #f7f7f7;">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3988.711849033379!2d36.6533418!3d-1.3614204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f031f0a4fd377%3A0x658e96ccb43e6351!2sOrok%20Plaza!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
-      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div> -->
-
-  <a href="https://wa.me/254784485009" class="whatsapp-btn" target="_blank">
-    WhatsApp Inquiry
-  </a>
-
-  <footer>
-    <p>Orok Plaza, 1st Floor, Ngong (Opposite Co-op Bank)</p>
-    <p>&copy; 2026 Ngong Training Center. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    const textElement = document.getElementById('dynamic-text');
-    const phrases = ["Computer Packages", "Graphic Design", "Web Development", "Data Science", "Engineering"];
-    let i = 0;
-    setInterval(() => {
-      i = (i + 1) % phrases.length;
-      textElement.textContent = phrases[i];
-    }, 4000);
-
-    const form = document.getElementById('ntc-form');
-    form.addEventListener("submit", function () {
-      // Form handling logic here
-    });
-  </script>
-
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const phrases = ["Coding & Web Dev", "Computer Packages", "Graphic Design", "Networking", "Engineering"];
+        let phraseIndex = 0; let charIndex = 0; let isDeleting = false;
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            textElement.textContent = isDeleting ? currentPhrase.substring(0, charIndex--) : currentPhrase.substring(0, charIndex++);
+            let speed = isDeleting ? 50 : 100;
+            if (!isDeleting && charIndex === currentPhrase.length) { isDeleting = true; speed = 2000; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; speed = 500; }
+            setTimeout(type, speed);
+        }
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
 </body>
-
 </html>
