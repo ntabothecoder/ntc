@@ -1,0 +1,7 @@
+name = "ntc-management-system"
+pages_build_output_dir = "." # Where your HTML files are
+
+[[d1_databases]]
+binding = "DB" # This is the variable name you'll use in your code
+database_name = "ntc-db"
+database_id = "PASTE-YOUR-D1-ID-HERE"
